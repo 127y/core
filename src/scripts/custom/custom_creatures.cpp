@@ -26,28 +26,28 @@ bool GossipHello_TeleportNPC(Player *player, Creature *_Creature)
     // HORDE
     if (player->GetTeam() == HORDE)
     {
-        // player->ADD_GOSSIP_ITEM(5, "PreTBC Mall"          , GOSSIP_SENDER_MAIN, 74);
-        player->ADD_GOSSIP_ITEM(5, "Major Cities"               , GOSSIP_SENDER_MAIN, 1);
-        player->ADD_GOSSIP_ITEM(5, "Starting Areas"       , GOSSIP_SENDER_MAIN, 3);
-        player->ADD_GOSSIP_ITEM(5, "Instances"            , GOSSIP_SENDER_MAIN, 5);
-        player->ADD_GOSSIP_ITEM(5, "Raids"                 , GOSSIP_SENDER_MAIN, 101);
-        player->ADD_GOSSIP_ITEM(5, "Gurubashi Arena" , GOSSIP_SENDER_MAIN, 4015);
-        player->ADD_GOSSIP_ITEM(5, "Zones - Kalimdor"     , GOSSIP_SENDER_MAIN, 6010);
-        player->ADD_GOSSIP_ITEM(5, "Zones - Eastern Kingdoms"     , GOSSIP_SENDER_MAIN, 6020);
+        // player->ADD_GOSSIP_ITEM(5, "[PreTBC Mall]"          , GOSSIP_SENDER_MAIN, 74);
+        player->ADD_GOSSIP_ITEM(5, "[主城传送]"               , GOSSIP_SENDER_MAIN, 1);
+        //player->ADD_GOSSIP_ITEM(5, "[新手出生地]"       , GOSSIP_SENDER_MAIN, 3);
+        player->ADD_GOSSIP_ITEM(5, "[副本传送]"            , GOSSIP_SENDER_MAIN, 5);
+        //player->ADD_GOSSIP_ITEM(5, "[团队副本]"                 , GOSSIP_SENDER_MAIN, 101);
+        //player->ADD_GOSSIP_ITEM(5, "[古拉巴什竞技场]" , GOSSIP_SENDER_MAIN, 4015);
+        //player->ADD_GOSSIP_ITEM(5, "[卡利姆多]"     , GOSSIP_SENDER_MAIN, 6010);
+        //player->ADD_GOSSIP_ITEM(5, "[东部王国]"     , GOSSIP_SENDER_MAIN, 6020);
 
         player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
     }
     // ALLIANCE
     else
     {
-        //player->ADD_GOSSIP_ITEM(5, "PreTBC Mall"          , GOSSIP_SENDER_MAIN, 74);
-        player->ADD_GOSSIP_ITEM(5, "Major Cities"               , GOSSIP_SENDER_MAIN, 2);
-        player->ADD_GOSSIP_ITEM(5, "Starting Areas"       , GOSSIP_SENDER_MAIN, 4);
-        player->ADD_GOSSIP_ITEM(5, "Instances"            , GOSSIP_SENDER_MAIN, 5);
-        player->ADD_GOSSIP_ITEM(5, "Raids"                 , GOSSIP_SENDER_MAIN, 101);
-        player->ADD_GOSSIP_ITEM(5, "Gurubashi Arena" , GOSSIP_SENDER_MAIN, 4015);
-        player->ADD_GOSSIP_ITEM(5, "Zones - Kalimdor"     , GOSSIP_SENDER_MAIN, 6010);
-        player->ADD_GOSSIP_ITEM(5, "Zones - Eastern Kingdoms"     , GOSSIP_SENDER_MAIN, 6020);
+        //player->ADD_GOSSIP_ITEM(5, "[PreTBC Mall]"          , GOSSIP_SENDER_MAIN, 74);
+        player->ADD_GOSSIP_ITEM(5, "[主城传送]"               , GOSSIP_SENDER_MAIN, 2);
+        //player->ADD_GOSSIP_ITEM(5, "[新手出生地]"       , GOSSIP_SENDER_MAIN, 4);
+        player->ADD_GOSSIP_ITEM(5, "[副本传送]"            , GOSSIP_SENDER_MAIN, 5);
+        //player->ADD_GOSSIP_ITEM(5, "[团队副本]"                 , GOSSIP_SENDER_MAIN, 101);
+        //player->ADD_GOSSIP_ITEM(5, "[古拉巴什竞技场]" , GOSSIP_SENDER_MAIN, 4015);
+        //player->ADD_GOSSIP_ITEM(5, "[卡利姆多]"     , GOSSIP_SENDER_MAIN, 6010);
+        //player->ADD_GOSSIP_ITEM(5, "[东部王国]"     , GOSSIP_SENDER_MAIN, 6020);
 
         player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
     }
@@ -59,113 +59,113 @@ void SendDefaultMenu_TeleportNPC(Player *player, Creature *_Creature, uint32 act
     switch (action)
     {
         case 1: // Cities [HORDE]
-            player->ADD_GOSSIP_ITEM(5, "Orgrimmar"             , GOSSIP_SENDER_MAIN, 20);
-            player->ADD_GOSSIP_ITEM(5, "Undercity"             , GOSSIP_SENDER_MAIN, 21);
-            player->ADD_GOSSIP_ITEM(5, "Thunderbluff"          , GOSSIP_SENDER_MAIN, 22);
-            //player->ADD_GOSSIP_ITEM(5, "Goldshire (Stormwind)" , GOSSIP_SENDER_MAIN, 4018);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[奥格瑞玛]"             , GOSSIP_SENDER_MAIN, 20);
+            player->ADD_GOSSIP_ITEM(5, "[幽暗城]"             , GOSSIP_SENDER_MAIN, 21);
+            player->ADD_GOSSIP_ITEM(5, "[雷霆崖]"          , GOSSIP_SENDER_MAIN, 22);
+            //player->ADD_GOSSIP_ITEM(5, "[Goldshire]" , GOSSIP_SENDER_MAIN, 4018);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 2: // Cities [ALLIANCE]
-            player->ADD_GOSSIP_ITEM(5, "Stormwind City"        , GOSSIP_SENDER_MAIN, 23);
-            player->ADD_GOSSIP_ITEM(5, "Ironforge"             , GOSSIP_SENDER_MAIN, 24);
-            player->ADD_GOSSIP_ITEM(5, "Darnassus"             , GOSSIP_SENDER_MAIN, 25);
-            //player->ADD_GOSSIP_ITEM(5, "Razor Hill(Orgrimmar)" , GOSSIP_SENDER_MAIN, 4017);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[暴风城]"        , GOSSIP_SENDER_MAIN, 23);
+            player->ADD_GOSSIP_ITEM(5, "[铁炉堡]"             , GOSSIP_SENDER_MAIN, 24);
+            player->ADD_GOSSIP_ITEM(5, "[达纳苏斯]"             , GOSSIP_SENDER_MAIN, 25);
+            //player->ADD_GOSSIP_ITEM(5, "[Razor Hill]" , GOSSIP_SENDER_MAIN, 4017);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 3: // Starting Places [HORDE]
-            player->ADD_GOSSIP_ITEM(5, "Shadow Grave"          , GOSSIP_SENDER_MAIN, 40);
-            player->ADD_GOSSIP_ITEM(5, "Valley of Trials"      , GOSSIP_SENDER_MAIN, 41);
-            player->ADD_GOSSIP_ITEM(5, "Camp Narache"          , GOSSIP_SENDER_MAIN, 42);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[灰影墓穴]"          , GOSSIP_SENDER_MAIN, 40);
+            player->ADD_GOSSIP_ITEM(5, "[试炼谷]"      , GOSSIP_SENDER_MAIN, 41);
+            player->ADD_GOSSIP_ITEM(5, "[纳拉其营地]"          , GOSSIP_SENDER_MAIN, 42);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 4: // Starting Places [ALLIANCE]
-            player->ADD_GOSSIP_ITEM(5, "Northshire Valley"     , GOSSIP_SENDER_MAIN, 43);
-            player->ADD_GOSSIP_ITEM(5, "Coldridge Valley"      , GOSSIP_SENDER_MAIN, 44);
-            player->ADD_GOSSIP_ITEM(5, "Shadowglen"            , GOSSIP_SENDER_MAIN, 45);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[北郡山谷]"     , GOSSIP_SENDER_MAIN, 43);
+            player->ADD_GOSSIP_ITEM(5, "[寒脊山谷]"      , GOSSIP_SENDER_MAIN, 44);
+            player->ADD_GOSSIP_ITEM(5, "[幽影谷]"            , GOSSIP_SENDER_MAIN, 45);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 5: // Instances [PAGE 1]
-            player->ADD_GOSSIP_ITEM(5, "The Wailing Caverns" , GOSSIP_SENDER_MAIN, 1249);
-            player->ADD_GOSSIP_ITEM(5, "Deadmines" , GOSSIP_SENDER_MAIN, 1250);
-            player->ADD_GOSSIP_ITEM(5, "Shadowfang Keep" , GOSSIP_SENDER_MAIN, 1251);
-            player->ADD_GOSSIP_ITEM(5, "Blackfathom Deeps" , GOSSIP_SENDER_MAIN, 1252);
-            player->ADD_GOSSIP_ITEM(5, "Razorfen Kraul" , GOSSIP_SENDER_MAIN, 1254);
-            player->ADD_GOSSIP_ITEM(5, "Razorfen Downs" , GOSSIP_SENDER_MAIN, 1256);
-            player->ADD_GOSSIP_ITEM(5, "Scarlet Monastery" , GOSSIP_SENDER_MAIN, 1257);
-            player->ADD_GOSSIP_ITEM(7, "[More] ->" , GOSSIP_SENDER_MAIN, 5551);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[哀嚎洞穴]" , GOSSIP_SENDER_MAIN, 1249);
+            player->ADD_GOSSIP_ITEM(5, "[死亡矿井]" , GOSSIP_SENDER_MAIN, 1250);
+            player->ADD_GOSSIP_ITEM(5, "[影牙城堡]" , GOSSIP_SENDER_MAIN, 1251);
+            player->ADD_GOSSIP_ITEM(5, "[黑暗深渊]" , GOSSIP_SENDER_MAIN, 1252);
+            player->ADD_GOSSIP_ITEM(5, "[剃刀沼泽]" , GOSSIP_SENDER_MAIN, 1254);
+            player->ADD_GOSSIP_ITEM(5, "[剃刀高地]" , GOSSIP_SENDER_MAIN, 1256);
+            player->ADD_GOSSIP_ITEM(5, "[血色修道院]" , GOSSIP_SENDER_MAIN, 1257);
+			player->ADD_GOSSIP_ITEM(5, "[奥达曼]" , GOSSIP_SENDER_MAIN, 1258);
+            player->ADD_GOSSIP_ITEM(7, "[下一页]" , GOSSIP_SENDER_MAIN, 5551);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 5551: // Instances [PAGE 2]
-            player->ADD_GOSSIP_ITEM(5, "Uldaman" , GOSSIP_SENDER_MAIN, 1258);
-            player->ADD_GOSSIP_ITEM(5, "Zul'Farrak" , GOSSIP_SENDER_MAIN, 1259);
-            player->ADD_GOSSIP_ITEM(5, "Maraudon" , GOSSIP_SENDER_MAIN, 1260);
-            player->ADD_GOSSIP_ITEM(5, "The Sunken Temple" , GOSSIP_SENDER_MAIN, 1261);
-            player->ADD_GOSSIP_ITEM(5, "Blackrock Depths" , GOSSIP_SENDER_MAIN, 1262);
-            player->ADD_GOSSIP_ITEM(5, "Dire Maul" , GOSSIP_SENDER_MAIN, 1263);
-            player->ADD_GOSSIP_ITEM(5, "Blackrock Spire" , GOSSIP_SENDER_MAIN, 1264);
-            player->ADD_GOSSIP_ITEM(5, "Stratholme" , GOSSIP_SENDER_MAIN, 1265);
-            player->ADD_GOSSIP_ITEM(5, "Scholomance" , GOSSIP_SENDER_MAIN, 1266);
-            player->ADD_GOSSIP_ITEM(7, "<- [Back]" , GOSSIP_SENDER_MAIN, 5);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[祖尔法拉克]" , GOSSIP_SENDER_MAIN, 1259);
+            player->ADD_GOSSIP_ITEM(5, "[玛拉顿]" , GOSSIP_SENDER_MAIN, 1260);
+            player->ADD_GOSSIP_ITEM(5, "[阿塔哈卡神庙]" , GOSSIP_SENDER_MAIN, 1261);
+            player->ADD_GOSSIP_ITEM(5, "[黑石深渊]" , GOSSIP_SENDER_MAIN, 1262);
+            player->ADD_GOSSIP_ITEM(5, "[厄运之槌]" , GOSSIP_SENDER_MAIN, 1263);
+            player->ADD_GOSSIP_ITEM(5, "[斯坦索姆]" , GOSSIP_SENDER_MAIN, 1265);
+            player->ADD_GOSSIP_ITEM(5, "[通灵学院]" , GOSSIP_SENDER_MAIN, 1266);
+			player->ADD_GOSSIP_ITEM(5, "[黑石塔]" , GOSSIP_SENDER_MAIN, 1264);
+            player->ADD_GOSSIP_ITEM(7, "[上一页]" , GOSSIP_SENDER_MAIN, 5);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 101: // Raids
-            player->ADD_GOSSIP_ITEM(5, "Zul'Gurub" , GOSSIP_SENDER_MAIN, 4000);
-            player->ADD_GOSSIP_ITEM(5, "Onyxia's Lair" , GOSSIP_SENDER_MAIN, 4001);
-            player->ADD_GOSSIP_ITEM(5, "Molten Core" , GOSSIP_SENDER_MAIN, 4002);
-            player->ADD_GOSSIP_ITEM(5, "Blackwing Lair" , GOSSIP_SENDER_MAIN, 4003);
-            player->ADD_GOSSIP_ITEM(5, "Ruins of Ahn'Qiraj" , GOSSIP_SENDER_MAIN, 4004);
-            player->ADD_GOSSIP_ITEM(5, "Temple of Ahn'Qiraj" , GOSSIP_SENDER_MAIN, 4005);
-            player->ADD_GOSSIP_ITEM(5, "Naxxramas" , GOSSIP_SENDER_MAIN, 4006);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[祖尔格拉布]" , GOSSIP_SENDER_MAIN, 4000);
+            player->ADD_GOSSIP_ITEM(5, "[奥妮克希亚的巢穴]" , GOSSIP_SENDER_MAIN, 4001);
+            player->ADD_GOSSIP_ITEM(5, "[熔火之心]" , GOSSIP_SENDER_MAIN, 4002);
+            player->ADD_GOSSIP_ITEM(5, "[黑翼之巢]" , GOSSIP_SENDER_MAIN, 4003);
+            player->ADD_GOSSIP_ITEM(5, "[安其拉废墟]" , GOSSIP_SENDER_MAIN, 4004);
+            player->ADD_GOSSIP_ITEM(5, "[安其拉神庙]" , GOSSIP_SENDER_MAIN, 4005);
+            player->ADD_GOSSIP_ITEM(5, "[纳克萨玛斯]" , GOSSIP_SENDER_MAIN, 4006);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 6010: // Kalimdor
-            player->ADD_GOSSIP_ITEM(5, "Ashenvale" , GOSSIP_SENDER_MAIN, 601);
-            player->ADD_GOSSIP_ITEM(5, "Darkshore" , GOSSIP_SENDER_MAIN, 602);
-            player->ADD_GOSSIP_ITEM(5, "Desolace" , GOSSIP_SENDER_MAIN, 603);
-            player->ADD_GOSSIP_ITEM(5, "Durotar" , GOSSIP_SENDER_MAIN, 604);
-            player->ADD_GOSSIP_ITEM(5, "Dustwallow Marsh" , GOSSIP_SENDER_MAIN, 605);
-            player->ADD_GOSSIP_ITEM(5, "Feralas" , GOSSIP_SENDER_MAIN, 606);
-            player->ADD_GOSSIP_ITEM(5, "Silithus" , GOSSIP_SENDER_MAIN, 607);
-            player->ADD_GOSSIP_ITEM(5, "Stonetalon Mountains" , GOSSIP_SENDER_MAIN, 608);
-            player->ADD_GOSSIP_ITEM(5, "Tanaris" , GOSSIP_SENDER_MAIN, 609);
-            player->ADD_GOSSIP_ITEM(5, "The Barrens" , GOSSIP_SENDER_MAIN, 610);
-            player->ADD_GOSSIP_ITEM(5, "Thousand Needles" , GOSSIP_SENDER_MAIN, 611);
-            player->ADD_GOSSIP_ITEM(5, "Winterspring" , GOSSIP_SENDER_MAIN, 612);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[灰谷]" , GOSSIP_SENDER_MAIN, 601);
+            player->ADD_GOSSIP_ITEM(5, "[黑海岸]" , GOSSIP_SENDER_MAIN, 602);
+            player->ADD_GOSSIP_ITEM(5, "[凄凉之地]" , GOSSIP_SENDER_MAIN, 603);
+            player->ADD_GOSSIP_ITEM(5, "[杜隆塔尔]" , GOSSIP_SENDER_MAIN, 604);
+            player->ADD_GOSSIP_ITEM(5, "[尘泥沼泽]" , GOSSIP_SENDER_MAIN, 605);
+            player->ADD_GOSSIP_ITEM(5, "[菲拉斯]" , GOSSIP_SENDER_MAIN, 606);
+            player->ADD_GOSSIP_ITEM(5, "[希利苏斯]" , GOSSIP_SENDER_MAIN, 607);
+            player->ADD_GOSSIP_ITEM(5, "[石爪山脉]" , GOSSIP_SENDER_MAIN, 608);
+            player->ADD_GOSSIP_ITEM(5, "[塔纳利斯]" , GOSSIP_SENDER_MAIN, 609);
+            player->ADD_GOSSIP_ITEM(5, "[贫瘠之地]" , GOSSIP_SENDER_MAIN, 610);
+            player->ADD_GOSSIP_ITEM(5, "[千针石林]" , GOSSIP_SENDER_MAIN, 611);
+            player->ADD_GOSSIP_ITEM(5, "[冬全谷]" , GOSSIP_SENDER_MAIN, 612);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
         case 6020: // Eastern Kingdoms
-            player->ADD_GOSSIP_ITEM(5, "Arathi Highlands" , GOSSIP_SENDER_MAIN, 613);
-            player->ADD_GOSSIP_ITEM(5, "Badlands" , GOSSIP_SENDER_MAIN, 614);
-            player->ADD_GOSSIP_ITEM(5, "Dun Morogh" , GOSSIP_SENDER_MAIN, 615);
-            player->ADD_GOSSIP_ITEM(5, "Duskwood" , GOSSIP_SENDER_MAIN, 616);
-            player->ADD_GOSSIP_ITEM(5, "Eastern Plaguelands" , GOSSIP_SENDER_MAIN, 617);
-            player->ADD_GOSSIP_ITEM(5, "Elwynn Forest" , GOSSIP_SENDER_MAIN, 618);
-            player->ADD_GOSSIP_ITEM(5, "Hillsbrad Foothills" , GOSSIP_SENDER_MAIN, 619);
-            player->ADD_GOSSIP_ITEM(5, "Redridge Mountains" , GOSSIP_SENDER_MAIN, 620);
-            player->ADD_GOSSIP_ITEM(5, "Silverpine Forest" , GOSSIP_SENDER_MAIN, 621);
-            player->ADD_GOSSIP_ITEM(5, "Stranglethorn Vale" , GOSSIP_SENDER_MAIN, 622);
-            player->ADD_GOSSIP_ITEM(5, "Swamp of Sorrows" , GOSSIP_SENDER_MAIN, 623);
-            player->ADD_GOSSIP_ITEM(5, "The Hinterlands" , GOSSIP_SENDER_MAIN, 624);
-            player->ADD_GOSSIP_ITEM(5, "Tirisfal Glades" , GOSSIP_SENDER_MAIN, 625);
-            player->ADD_GOSSIP_ITEM(5, "Westfall" , GOSSIP_SENDER_MAIN, 626);
-            player->ADD_GOSSIP_ITEM(5, "Wetlands" , GOSSIP_SENDER_MAIN, 627);
-            player->ADD_GOSSIP_ITEM(5, "<-[Main Menu]"                  , GOSSIP_SENDER_MAIN, 100);
+            player->ADD_GOSSIP_ITEM(5, "[阿拉希高地]" , GOSSIP_SENDER_MAIN, 613);
+            player->ADD_GOSSIP_ITEM(5, "[荒芜之地]" , GOSSIP_SENDER_MAIN, 614);
+            player->ADD_GOSSIP_ITEM(5, "[丹莫罗]" , GOSSIP_SENDER_MAIN, 615);
+            player->ADD_GOSSIP_ITEM(5, "[暮色森林]" , GOSSIP_SENDER_MAIN, 616);
+            player->ADD_GOSSIP_ITEM(5, "[东瘟疫之地]" , GOSSIP_SENDER_MAIN, 617);
+            player->ADD_GOSSIP_ITEM(5, "[艾尔文森林]" , GOSSIP_SENDER_MAIN, 618);
+            player->ADD_GOSSIP_ITEM(5, "[希尔斯布莱德丘陵]" , GOSSIP_SENDER_MAIN, 619);
+            player->ADD_GOSSIP_ITEM(5, "[赤脊山]" , GOSSIP_SENDER_MAIN, 620);
+            player->ADD_GOSSIP_ITEM(5, "[银松森林]" , GOSSIP_SENDER_MAIN, 621);
+            player->ADD_GOSSIP_ITEM(5, "[荆棘谷]" , GOSSIP_SENDER_MAIN, 622);
+            player->ADD_GOSSIP_ITEM(5, "[悲伤沼泽]" , GOSSIP_SENDER_MAIN, 623);
+            player->ADD_GOSSIP_ITEM(5, "[辛特兰]" , GOSSIP_SENDER_MAIN, 624);
+            player->ADD_GOSSIP_ITEM(5, "[提斯瑞法林地]" , GOSSIP_SENDER_MAIN, 625);
+            player->ADD_GOSSIP_ITEM(5, "[西部荒野]" , GOSSIP_SENDER_MAIN, 626);
+            player->ADD_GOSSIP_ITEM(5, "[湿地]" , GOSSIP_SENDER_MAIN, 627);
+            player->ADD_GOSSIP_ITEM(5, "[返回]"                  , GOSSIP_SENDER_MAIN, 100);
 
             player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             break;
@@ -513,28 +513,28 @@ void SendDefaultMenu_TeleportNPC(Player *player, Creature *_Creature, uint32 act
             // HORDE
             if (player->GetTeam() == HORDE)
             {
-                //player->ADD_GOSSIP_ITEM(5, "PreTBC Mall"          , GOSSIP_SENDER_MAIN, 74);
-                player->ADD_GOSSIP_ITEM(5, "Major Cities"               , GOSSIP_SENDER_MAIN, 1);
-                player->ADD_GOSSIP_ITEM(5, "Starting Areas"       , GOSSIP_SENDER_MAIN, 3);
-                player->ADD_GOSSIP_ITEM(5, "Instances"            , GOSSIP_SENDER_MAIN, 5);
-                player->ADD_GOSSIP_ITEM(5, "Raids"                 , GOSSIP_SENDER_MAIN, 101);
-                player->ADD_GOSSIP_ITEM(5, "Gurubashi Arena" , GOSSIP_SENDER_MAIN, 4015);
-                player->ADD_GOSSIP_ITEM(5, "Zones - Kalimdor"     , GOSSIP_SENDER_MAIN, 6010);
-                player->ADD_GOSSIP_ITEM(5, "Zones - Eastern Kingdoms"     , GOSSIP_SENDER_MAIN, 6020);
+                //player->ADD_GOSSIP_ITEM(5, "[PreTBC Mall]"          , GOSSIP_SENDER_MAIN, 74);
+                player->ADD_GOSSIP_ITEM(5, "[主城传送]"               , GOSSIP_SENDER_MAIN, 1);
+                //player->ADD_GOSSIP_ITEM(5, "[新手出生地]"       , GOSSIP_SENDER_MAIN, 3);
+                player->ADD_GOSSIP_ITEM(5, "[副本传送]"            , GOSSIP_SENDER_MAIN, 5);
+                //player->ADD_GOSSIP_ITEM(5, "[团队副本]"                 , GOSSIP_SENDER_MAIN, 101);
+                //player->ADD_GOSSIP_ITEM(5, "[古拉巴什竞技场]" , GOSSIP_SENDER_MAIN, 4015);
+                //player->ADD_GOSSIP_ITEM(5, "[卡利姆多]"     , GOSSIP_SENDER_MAIN, 6010);
+                //player->ADD_GOSSIP_ITEM(5, "[东部王国]"     , GOSSIP_SENDER_MAIN, 6020);
 
                 player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             }
             // ALLIANCE
             else
             {
-                //player->ADD_GOSSIP_ITEM(5, "PreTBC Mall"          , GOSSIP_SENDER_MAIN, 74);
-                player->ADD_GOSSIP_ITEM(5, "Major Cities"               , GOSSIP_SENDER_MAIN, 2);
-                player->ADD_GOSSIP_ITEM(5, "Starting Areas"       , GOSSIP_SENDER_MAIN, 4);
-                player->ADD_GOSSIP_ITEM(5, "Instances"            , GOSSIP_SENDER_MAIN, 5);
-                player->ADD_GOSSIP_ITEM(5, "Raids"                 , GOSSIP_SENDER_MAIN, 101);
-                player->ADD_GOSSIP_ITEM(5, "Gurubashi Arena" , GOSSIP_SENDER_MAIN, 4015);
-                player->ADD_GOSSIP_ITEM(5, "Zones - Kalimdor"     , GOSSIP_SENDER_MAIN, 6010);
-                player->ADD_GOSSIP_ITEM(5, "Zones - Eastern Kingdoms"     , GOSSIP_SENDER_MAIN, 6020);
+                //player->ADD_GOSSIP_ITEM(5, "[PreTBC Mall]"          , GOSSIP_SENDER_MAIN, 74);
+                player->ADD_GOSSIP_ITEM(5, "[主城传送]"               , GOSSIP_SENDER_MAIN, 2);
+                //player->ADD_GOSSIP_ITEM(5, "[新手出生地]"       , GOSSIP_SENDER_MAIN, 4);
+                player->ADD_GOSSIP_ITEM(5, "[副本传送]"            , GOSSIP_SENDER_MAIN, 5);
+                //player->ADD_GOSSIP_ITEM(5, "[团队副本]"                 , GOSSIP_SENDER_MAIN, 101);
+                //player->ADD_GOSSIP_ITEM(5, "[古拉巴什竞技场]" , GOSSIP_SENDER_MAIN, 4015);
+                //player->ADD_GOSSIP_ITEM(5, "[卡利姆多]"     , GOSSIP_SENDER_MAIN, 6010);
+                //player->ADD_GOSSIP_ITEM(5, "[东部王国]"     , GOSSIP_SENDER_MAIN, 6020);
 
                 player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _Creature->GetGUID());
             }
@@ -1011,7 +1011,7 @@ struct npc_training_dummyAI : ScriptedAI
             {
                 for (auto itr = attackers.begin(); itr != attackers.end();)
                 {
-                    if (!itr->first || !itr->first->IsInWorld())
+					if (!itr->first || !itr->first->IsInWorld())
                     {
                         itr = attackers.erase(itr);
                         continue;

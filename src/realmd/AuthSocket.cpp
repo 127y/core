@@ -784,7 +784,7 @@ bool AuthSocket::_HandleLogonProof()
         // Geolocking checks must be done after an otherwise successful login to prevent lockout attacks
         if (_geoUnlockPIN) // remove the PIN to unlock the account since login succeeded
         {
-            auto result = LoginDatabase.PExecute("UPDATE account SET geolock_pin = 0 WHERE username = '%s'",
+            auto result = LoginDatabase.PExecute("UPDATE account SET geolock_pin = %u WHERE username = '%s'",
                 _safelogin.c_str());
 
             if (!result)

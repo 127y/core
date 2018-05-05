@@ -178,28 +178,15 @@ extern int main(int argc, char **argv)
 
     sLog.outString("Core revision: %s [world-daemon]", _FULLVERSION);
     sLog.outString( "<Ctrl-C> to stop." );
-    sLog.outString("\n\n"
-        "MM   MM         MM   MM  MMMMM   MMMM   MMMMM\n"
-        "MM   MM         MM   MM MMM MMM MM  MM MMM MMM\n"
-        "MMM MMM         MMM  MM MMM MMM MM  MM MMM\n"
-        "MM M MM         MMMM MM MMM     MM  MM  MMM\n"
-        "MM M MM  MMMMM  MM MMMM MMM     MM  MM   MMM\n"
-        "MM M MM M   MMM MM  MMM MMMMMMM MM  MM    MMM\n"
-        "MM   MM     MMM MM   MM MM  MMM MM  MM     MMM\n"
-        "MM   MM MMMMMMM MM   MM MMM MMM MM  MM MMM MMM\n"
-        "MM   MM MM  MMM MM   MM  MMMMMM  MMMM   MMMMM\n"
-        "        MM  MMM http://getmangos.com\n"
-        "        MMMMMM\n\n");
-    sLog.outString("Light's Hope : https://lightshope.org/");
     sLog.outString("Using configuration file %s.", cfg_file);
 
 #define STR(s) #s
 #define XSTR(s) STR(s)
 
     //sLog.nostalrius("Starting worldserver CORE: %s SCRIPTS: %s " __DATE__ " " __TIME__ , XSTR(CORE_VERSION), XSTR(SCRIPT_VERSION));
-    sLog.outInfo("Build params : \"" MANGOS_BUILD_OPTIONS "\"");
-    sLog.outInfo("Alloc library: " MANGOS_ALLOC_LIB "");
-    sLog.outInfo("Core Revision: " _FULLVERSION);
+    //sLog.outInfo("Build params : \"" MANGOS_BUILD_OPTIONS "\"");
+    //sLog.outInfo("Alloc library: " MANGOS_ALLOC_LIB "");
+    //sLog.outInfo("Core Revision: " _FULLVERSION);
 
     DETAIL_LOG("%s (Library: %s)", OPENSSL_VERSION_TEXT, SSLeay_version(SSLEAY_VERSION));
     if (SSLeay() < 0x009080bfL )
